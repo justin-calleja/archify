@@ -1,0 +1,31 @@
+{
+  "version": "1.8.10",
+  "compilerOptions": {
+    "outDir": "./lib",
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "isolatedModules": false,
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declaration": true,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
+    "preserveConstEnums": true,
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "filesGlob": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "files": [
+    "src/index.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
+}

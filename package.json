@@ -1,0 +1,31 @@
+{
+  "name": "archify",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "typescript": "^1.8.10"
+  },
+  "scripts": {
+    "clean": "rm -rf ./lib && mkdir ./lib",
+    "cleanTest": "rm -rf ./testlib && mkdir ./testlib",
+    "build": "npm run clean && tsc -p ./tsconfig.json",
+    "buildTest": "npm run cleanTest && tsc -p ./tsconfig-test.json",
+    "prepublish": "npm run test",
+    "pretest": "npm run build && npm run buildTest",
+    "test": "mocha --ui tdd ./test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justin-calleja/archifier.git"
+  },
+  "keywords": [],
+  "author": "Justin Calleja <calleja.justin@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justin-calleja/archifier/issues"
+  },
+  "homepage": "https://github.com/justin-calleja/archifier#readme"
+}
