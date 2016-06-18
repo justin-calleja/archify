@@ -10,11 +10,9 @@
   },
   "scripts": {
     "clean": "rm -rf ./lib && mkdir ./lib",
-    "cleanTest": "rm -rf ./testlib && mkdir ./testlib",
     "build": "npm run clean && tsc -p ./tsconfig.json",
-    "buildTest": "npm run cleanTest && tsc -p ./tsconfig-test.json",
     "prepublish": "npm run test",
-    "pretest": "npm run build && npm run buildTest",
+    "pretest": "npm run build",
     "test": "mocha --ui tdd ./test/index.js"
   },
   "repository": {
