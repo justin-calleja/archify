@@ -20,7 +20,7 @@ export interface Opts {
 
 // Note: remember to access with .default from commonjs modules
 // https://github.com/Microsoft/TypeScript/issues/2719
-export default function archify(label: string, data: any, childrenOf: ChildrenOfFun, opts: Opts = {}) {
+export default function archify(label: string, data: any, childrenOf: ChildrenOfFun, opts: Opts = {}): Node {
   var kids: LabelParts[] = childrenOf(label, data);
   var nodes = kids.map(kid => {
     var opts = {
