@@ -1,6 +1,6 @@
 {
   "a": {
-    "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir1/a",
+    "absPath": "../pkg-dependents/test/fixtures/dir1/a",
     "pkgJSON": {
       "name": "a",
       "version": "0.0.1",
@@ -13,13 +13,13 @@
       }
     },
     "dependents": {
-      "dependencyDependents": [],
-      "peerDependencyDependents": [],
-      "devDependencyDependents": []
+      "dependencyDependents": {},
+      "peerDependencyDependents": {},
+      "devDependencyDependents": {}
     }
   },
   "c": {
-    "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir1/c",
+    "absPath": "../pkg-dependents/test/fixtures/dir1/c",
     "pkgJSON": {
       "name": "c",
       "version": "0.0.2",
@@ -28,9 +28,9 @@
       }
     },
     "dependents": {
-      "dependencyDependents": [
-        {
-          "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir1/a",
+      "dependencyDependents": {
+        "a": {
+          "absPath": "../pkg-dependents/test/fixtures/dir1/a",
           "pkgJSON": {
             "name": "a",
             "version": "0.0.1",
@@ -43,13 +43,13 @@
             }
           }
         }
-      ],
-      "peerDependencyDependents": [],
-      "devDependencyDependents": []
+      },
+      "peerDependencyDependents": {},
+      "devDependencyDependents": {}
     }
   },
   "e": {
-    "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir1/e",
+    "absPath": "../pkg-dependents/test/fixtures/dir1/e",
     "pkgJSON": {
       "name": "e",
       "version": "0.0.3",
@@ -58,9 +58,9 @@
       }
     },
     "dependents": {
-      "dependencyDependents": [
-        {
-          "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir1/c",
+      "dependencyDependents": {
+        "c": {
+          "absPath": "../pkg-dependents/test/fixtures/dir1/c",
           "pkgJSON": {
             "name": "c",
             "version": "0.0.2",
@@ -69,23 +69,23 @@
             }
           }
         }
-      ],
-      "peerDependencyDependents": [],
-      "devDependencyDependents": []
+      },
+      "peerDependencyDependents": {},
+      "devDependencyDependents": {}
     }
   },
   "g": {
-    "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir1/g",
+    "absPath": "../pkg-dependents/test/fixtures/dir1/g",
     "pkgJSON": {
       "name": "g",
       "version": "0.0.1"
     },
     "dependents": {
-      "dependencyDependents": [],
-      "peerDependencyDependents": [],
-      "devDependencyDependents": [
-        {
-          "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir2/d",
+      "dependencyDependents": {},
+      "peerDependencyDependents": {},
+      "devDependencyDependents": {
+        "d": {
+          "absPath": "../pkg-dependents/test/fixtures/dir2/d",
           "pkgJSON": {
             "name": "d",
             "version": "0.0.1",
@@ -98,11 +98,11 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "b": {
-    "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir2/b",
+    "absPath": "../pkg-dependents/test/fixtures/dir2/b",
     "pkgJSON": {
       "name": "b",
       "version": "0.0.1",
@@ -111,9 +111,9 @@
       }
     },
     "dependents": {
-      "dependencyDependents": [
-        {
-          "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir1/a",
+      "dependencyDependents": {
+        "a": {
+          "absPath": "../pkg-dependents/test/fixtures/dir1/a",
           "pkgJSON": {
             "name": "a",
             "version": "0.0.1",
@@ -126,13 +126,13 @@
             }
           }
         }
-      ],
-      "peerDependencyDependents": [],
-      "devDependencyDependents": []
+      },
+      "peerDependencyDependents": {},
+      "devDependencyDependents": {}
     }
   },
   "d": {
-    "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir2/d",
+    "absPath": "../pkg-dependents/test/fixtures/dir2/d",
     "pkgJSON": {
       "name": "d",
       "version": "0.0.1",
@@ -145,10 +145,10 @@
       }
     },
     "dependents": {
-      "dependencyDependents": [],
-      "peerDependencyDependents": [
-        {
-          "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir1/a",
+      "dependencyDependents": {},
+      "peerDependencyDependents": {
+        "a": {
+          "absPath": "../pkg-dependents/test/fixtures/dir1/a",
           "pkgJSON": {
             "name": "a",
             "version": "0.0.1",
@@ -161,10 +161,10 @@
             }
           }
         }
-      ],
-      "devDependencyDependents": [
-        {
-          "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir2/b",
+      },
+      "devDependencyDependents": {
+        "b": {
+          "absPath": "../pkg-dependents/test/fixtures/dir2/b",
           "pkgJSON": {
             "name": "b",
             "version": "0.0.1",
@@ -173,11 +173,11 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "f": {
-    "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir2/f",
+    "absPath": "../pkg-dependents/test/fixtures/dir2/f",
     "pkgJSON": {
       "name": "f",
       "version": "0.0.3",
@@ -186,9 +186,9 @@
       }
     },
     "dependents": {
-      "dependencyDependents": [
-        {
-          "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir2/d",
+      "dependencyDependents": {
+        "d": {
+          "absPath": "../pkg-dependents/test/fixtures/dir2/d",
           "pkgJSON": {
             "name": "d",
             "version": "0.0.1",
@@ -201,9 +201,9 @@
             }
           }
         }
-      ],
-      "peerDependencyDependents": [],
-      "devDependencyDependents": []
+      },
+      "peerDependencyDependents": {},
+      "devDependencyDependents": {}
     }
   }
 }

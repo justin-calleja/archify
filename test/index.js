@@ -4,15 +4,18 @@ var data = require('./fixtures/abc');
 
 function childrenOf(parent, data) {
   var dependents = data[parent].dependents;
-  var depsLP = dependents.dependencyDependents.map(dep => ({ label: dep.pkgJSON.name, suffix: `.dependencies['${parent}']` }));
-  var peerDepsLP = dependents.peerDependencyDependents.map(peerDep => ({
+  var depsLP = Object.keys(dependents.dependencyDependents).map(key => ({
+    label: key,
+    suffix: `.dependencies['${parent}']`
+  }));
+  var peerDepsLP = Object.keys(dependents.peerDependencyDependents).map(key => ({
     prefix: '[peer] ',
-    label: peerDep.pkgJSON.name,
+    label: key,
     suffix: `.peerDependencies['${parent}']`
   }));
-  var devDepsLP = dependents.devDependencyDependents.map(devDep => ({
+  var devDepsLP = Object.keys(dependents.devDependencyDependents).map(key => ({
     prefix: '[dev] ',
-    label: devDep.pkgJSON.name,
+    label: key,
     suffix: `.devDependencies['${parent}']`
   }));
 
