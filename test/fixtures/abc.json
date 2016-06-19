@@ -1,0 +1,209 @@
+{
+  "a": {
+    "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir1/a",
+    "pkgJSON": {
+      "name": "a",
+      "version": "0.0.1",
+      "dependencies": {
+        "b": "^0.0.1",
+        "c": "^0.0.2"
+      },
+      "peerDependencies": {
+        "d": "^0.0.1"
+      }
+    },
+    "dependents": {
+      "dependencyDependents": [],
+      "peerDependencyDependents": [],
+      "devDependencyDependents": []
+    }
+  },
+  "c": {
+    "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir1/c",
+    "pkgJSON": {
+      "name": "c",
+      "version": "0.0.2",
+      "dependencies": {
+        "e": "^0.0.3"
+      }
+    },
+    "dependents": {
+      "dependencyDependents": [
+        {
+          "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir1/a",
+          "pkgJSON": {
+            "name": "a",
+            "version": "0.0.1",
+            "dependencies": {
+              "b": "^0.0.1",
+              "c": "^0.0.2"
+            },
+            "peerDependencies": {
+              "d": "^0.0.1"
+            }
+          }
+        }
+      ],
+      "peerDependencyDependents": [],
+      "devDependencyDependents": []
+    }
+  },
+  "e": {
+    "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir1/e",
+    "pkgJSON": {
+      "name": "e",
+      "version": "0.0.3",
+      "dependencies": {
+        "no-x": "^0.0.1"
+      }
+    },
+    "dependents": {
+      "dependencyDependents": [
+        {
+          "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir1/c",
+          "pkgJSON": {
+            "name": "c",
+            "version": "0.0.2",
+            "dependencies": {
+              "e": "^0.0.3"
+            }
+          }
+        }
+      ],
+      "peerDependencyDependents": [],
+      "devDependencyDependents": []
+    }
+  },
+  "g": {
+    "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir1/g",
+    "pkgJSON": {
+      "name": "g",
+      "version": "0.0.1"
+    },
+    "dependents": {
+      "dependencyDependents": [],
+      "peerDependencyDependents": [],
+      "devDependencyDependents": [
+        {
+          "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir2/d",
+          "pkgJSON": {
+            "name": "d",
+            "version": "0.0.1",
+            "dependencies": {
+              "f": "^0.0.3",
+              "no-y": "^0.0.1"
+            },
+            "devDependencies": {
+              "g": "^0.0.1"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "b": {
+    "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir2/b",
+    "pkgJSON": {
+      "name": "b",
+      "version": "0.0.1",
+      "devDependencies": {
+        "d": "^0.0.1"
+      }
+    },
+    "dependents": {
+      "dependencyDependents": [
+        {
+          "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir1/a",
+          "pkgJSON": {
+            "name": "a",
+            "version": "0.0.1",
+            "dependencies": {
+              "b": "^0.0.1",
+              "c": "^0.0.2"
+            },
+            "peerDependencies": {
+              "d": "^0.0.1"
+            }
+          }
+        }
+      ],
+      "peerDependencyDependents": [],
+      "devDependencyDependents": []
+    }
+  },
+  "d": {
+    "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir2/d",
+    "pkgJSON": {
+      "name": "d",
+      "version": "0.0.1",
+      "dependencies": {
+        "f": "^0.0.3",
+        "no-y": "^0.0.1"
+      },
+      "devDependencies": {
+        "g": "^0.0.1"
+      }
+    },
+    "dependents": {
+      "dependencyDependents": [],
+      "peerDependencyDependents": [
+        {
+          "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir1/a",
+          "pkgJSON": {
+            "name": "a",
+            "version": "0.0.1",
+            "dependencies": {
+              "b": "^0.0.1",
+              "c": "^0.0.2"
+            },
+            "peerDependencies": {
+              "d": "^0.0.1"
+            }
+          }
+        }
+      ],
+      "devDependencyDependents": [
+        {
+          "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir2/b",
+          "pkgJSON": {
+            "name": "b",
+            "version": "0.0.1",
+            "devDependencies": {
+              "d": "^0.0.1"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "f": {
+    "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir2/f",
+    "pkgJSON": {
+      "name": "f",
+      "version": "0.0.3",
+      "dependencies": {
+        "no-z": "^0.0.1"
+      }
+    },
+    "dependents": {
+      "dependencyDependents": [
+        {
+          "absPath": "/Users/justin/pkg-dependents-home/pkg-dependents/test/fixtures/dir2/d",
+          "pkgJSON": {
+            "name": "d",
+            "version": "0.0.1",
+            "dependencies": {
+              "f": "^0.0.3",
+              "no-y": "^0.0.1"
+            },
+            "devDependencies": {
+              "g": "^0.0.1"
+            }
+          }
+        }
+      ],
+      "peerDependencyDependents": [],
+      "devDependencyDependents": []
+    }
+  }
+}
