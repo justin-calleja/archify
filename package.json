@@ -12,6 +12,8 @@
     "clean": "rm -rf ./lib && mkdir ./lib",
     "build": "npm run clean && tsc -p ./tsconfig.json",
     "prepublish": "npm run test",
+    "preversion": "npm run test",
+    "postversion": "git push origin master && git push --tags",
     "pretest": "npm run build",
     "test": "mocha --ui tdd ./test/index.js"
   },

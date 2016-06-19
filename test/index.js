@@ -19,6 +19,25 @@ function childrenOf(parent, data) {
   return depsLP.concat(peerDepsLP).concat(devDepsLP);
 }
 
+// expected result:
+// {
+//   "label": "d",
+//   "nodes": [
+//     {
+//       "label": "[peer] a.peerDependencies['d']",
+//       "nodes": []
+//     },
+//     {
+//       "label": "[dev] b.devDependencies['d']",
+//       "nodes": [
+//         {
+//           "label": "a.dependencies['b']",
+//           "nodes": []
+//         }
+//       ]
+//     }
+//   ]
+// }
 suite('#archify()', function() {
   test('expect correct structure when root is d', function () {
     var res = archify('d', data, childrenOf);
