@@ -2,7 +2,7 @@
   "name": "archify",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.5.3",
