@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/justin-calleja/archifier.git"
+    "url": "https://github.com/justin-calleja/archify.git"
   },
   "keywords": [],
   "author": "Justin Calleja <calleja.justin@gmail.com>",
