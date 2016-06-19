@@ -1,5 +1,5 @@
 var assert = require('chai').assert;
-var archify = require('../lib').archify;
+var archify = require('../lib').default;
 var data = require('./fixtures/abc');
 
 function childrenOf(parent, data) {
@@ -20,7 +20,7 @@ function childrenOf(parent, data) {
 }
 
 suite('#archify()', function() {
-  test('when root is d', function () {
+  test('expect correct structure when root is d', function () {
     var res = archify('d', data, childrenOf);
     assert.equal(res.label, 'd', 'Root should have label of "d"');
 

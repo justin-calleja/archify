@@ -18,9 +18,9 @@ export interface Opts {
   labelSuffix?: string
 }
 
-// Note: if you're going to make default, remember to access with .default from commonjs modules
+// Note: remember to access with .default from commonjs modules
 // https://github.com/Microsoft/TypeScript/issues/2719
-export function archify(label: string, data: any, childrenOf: ChildrenOfFun, opts: Opts = {}) {
+export default function archify(label: string, data: any, childrenOf: ChildrenOfFun, opts: Opts = {}) {
   var kids: LabelParts[] = childrenOf(label, data);
   var nodes = kids.map(kid => {
     var opts = {
