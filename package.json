@@ -17,6 +17,7 @@
     "pretest": "npm run build",
     "test": "mocha ./test/index.js"
   },
+  "typings": "./lib/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/justin-calleja/archify.git"
